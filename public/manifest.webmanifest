@@ -1,0 +1,12 @@
+{
+  "name": "Ascend — Placement Journey",
+  "short_name": "Ascend",
+  "description": "Daily, monthly and final targets with persistent reminders.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#eef2ff",
+  "theme_color": "#eef2ff",
+  "icons": [
+    { "src": "/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}
