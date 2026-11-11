@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 import Select from "./Select";
+=======
+>>>>>>> 6e9173cad89b7b53fed34d11013f586fd91d429b
 import { useEffect, useState } from "react";
 import { Trash2 } from "lucide-react";
 import Sheet, { Field } from "./Sheet";
@@ -82,6 +85,7 @@ export default function TaskModal() {
         </div>
         <div className="form-row">
           <Field label="Category">
+<<<<<<< HEAD
             <Select className="input" value={f.category} onChange={set("category")}>
               {CATEGORIES.map((c) => (
                 <option key={c.id}>{c.id}</option>
@@ -90,23 +94,45 @@ export default function TaskModal() {
           </Field>
           <Field label="Repeat">
             <Select className="input" value={f.repeat} onChange={set("repeat")}>
+=======
+            <select className="input" value={f.category} onChange={set("category")}>
+              {CATEGORIES.map((c) => (
+                <option key={c.id}>{c.id}</option>
+              ))}
+            </select>
+          </Field>
+          <Field label="Repeat">
+            <select className="input" value={f.repeat} onChange={set("repeat")}>
+>>>>>>> 6e9173cad89b7b53fed34d11013f586fd91d429b
               {REPEATS.map((r) => (
                 <option key={r.id} value={r.id}>
                   {r.label}
                 </option>
               ))}
+<<<<<<< HEAD
             </Select>
           </Field>
         </div>
         <Field label="Count towards a monthly target" hint="Ticking this task moves that target's progress by 1">
           <Select className="input" value={f.goalId} onChange={set("goalId")}>
+=======
+            </select>
+          </Field>
+        </div>
+        <Field label="Count towards a monthly target" hint="Ticking this task moves that target's progress by 1">
+          <select className="input" value={f.goalId} onChange={set("goalId")}>
+>>>>>>> 6e9173cad89b7b53fed34d11013f586fd91d429b
             <option value="">None</option>
             {monthly.map((g) => (
               <option key={g.id} value={g.id}>
                 {g.title} · {monthLabel(g.month, { month: "short", year: "numeric" })}
               </option>
             ))}
+<<<<<<< HEAD
           </Select>
+=======
+          </select>
+>>>>>>> 6e9173cad89b7b53fed34d11013f586fd91d429b
         </Field>
         <Field label="Notes">
           <textarea className="input" rows={3} placeholder="Optional details…" value={f.notes} onChange={set("notes")} />

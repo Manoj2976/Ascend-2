@@ -15,7 +15,11 @@ import { parseQuickAdd } from "../lib/quickadd";
 import { daysBetween, fmtDate, fmtTime, greeting, monthKey, monthLabel, todayKey } from "../lib/dates";
 
 export default function Dashboard() {
+<<<<<<< HEAD
   const { state, addTask, updateTask, logDaily } = useStore();
+=======
+  const { state, addTask, updateTask, logDaily, loadSample } = useStore();
+>>>>>>> 6e9173cad89b7b53fed34d11013f586fd91d429b
   const { openTask, openGoal } = useUI();
   const [quick, setQuick] = useState("");
 
@@ -64,12 +68,22 @@ export default function Dashboard() {
           <Mountain size={28} />
           <div className="grow">
             <strong>Welcome to Ascend</strong>
+<<<<<<< HEAD
             <p className="muted">Start by setting your final target, then break it into monthly and daily targets.</p>
+=======
+            <p className="muted">Start by setting your final target, then break it into monthly and daily targets. Or load sample data to explore.</p>
+>>>>>>> 6e9173cad89b7b53fed34d11013f586fd91d429b
           </div>
           <div className="row gap">
             <button className="btn btn-primary" onClick={() => openGoal(null, "FINAL")}>
               Set final target
             </button>
+<<<<<<< HEAD
+=======
+            <button className="btn btn-ghost" onClick={loadSample}>
+              Load sample data
+            </button>
+>>>>>>> 6e9173cad89b7b53fed34d11013f586fd91d429b
           </div>
         </div>
       )}

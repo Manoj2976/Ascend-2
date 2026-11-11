@@ -1,6 +1,11 @@
+<<<<<<< HEAD
 import Select from "../components/Select";
 import { useRef, useState } from "react";
 import { Bell, BellRing, Download, LogOut, RefreshCw, Smartphone, Trash2, Upload, UserRound } from "lucide-react";
+=======
+import { useRef, useState } from "react";
+import { Bell, BellRing, Download, LogOut, RefreshCw, Smartphone, Sparkles, Trash2, Upload, UserRound } from "lucide-react";
+>>>>>>> 6e9173cad89b7b53fed34d11013f586fd91d429b
 import PageHeader, { Page } from "../components/PageHeader";
 import { useStore } from "../lib/store";
 import { useAuth } from "../lib/auth";
@@ -26,7 +31,11 @@ const Switch = ({ on, onChange, label }) => (
 );
 
 export default function Settings() {
+<<<<<<< HEAD
   const { state, setSettings, exportData, importData, resetAll } = useStore();
+=======
+  const { state, setSettings, exportData, importData, loadSample, resetAll } = useStore();
+>>>>>>> 6e9173cad89b7b53fed34d11013f586fd91d429b
   const { auth, logout } = useAuth();
   const { status, syncNow } = useSync();
   const s = state.settings;
@@ -132,22 +141,37 @@ export default function Settings() {
           </div>
         </Row>
         <Row title="Remind me for" hint="After a task's time, keep reminding for this long">
+<<<<<<< HEAD
           <Select className="input input-sm" value={s.windowMin} onChange={(e) => setSettings({ windowMin: Number(e.target.value) })}>
+=======
+          <select className="input input-sm" value={s.windowMin} onChange={(e) => setSettings({ windowMin: Number(e.target.value) })}>
+>>>>>>> 6e9173cad89b7b53fed34d11013f586fd91d429b
             {[10, 15, 30, 45, 60, 90].map((m) => (
               <option key={m} value={m}>
                 {m} minutes
               </option>
             ))}
+<<<<<<< HEAD
           </Select>
         </Row>
         <Row title="Repeat every" hint="Until the task is ticked">
           <Select className="input input-sm" value={s.intervalMin} onChange={(e) => setSettings({ intervalMin: Number(e.target.value) })}>
+=======
+          </select>
+        </Row>
+        <Row title="Repeat every" hint="Until the task is ticked">
+          <select className="input input-sm" value={s.intervalMin} onChange={(e) => setSettings({ intervalMin: Number(e.target.value) })}>
+>>>>>>> 6e9173cad89b7b53fed34d11013f586fd91d429b
             {[1, 2, 3, 5, 10, 15].map((m) => (
               <option key={m} value={m}>
                 {m} minute{m > 1 ? "s" : ""}
               </option>
             ))}
+<<<<<<< HEAD
           </Select>
+=======
+          </select>
+>>>>>>> 6e9173cad89b7b53fed34d11013f586fd91d429b
         </Row>
         <Row title="Sound">
           <Switch on={s.sound} onChange={(v) => setSettings({ sound: v })} label="Sound" />
@@ -180,6 +204,17 @@ export default function Settings() {
             <input ref={fileRef} type="file" accept="application/json" hidden onChange={upload} />
           </div>
         </Row>
+<<<<<<< HEAD
+=======
+        <Row title="Sample data" hint="Replaces your current data with a demo">
+          <button
+            className="btn btn-ghost btn-sm"
+            onClick={() => window.confirm("Replace all current data with sample data?") && loadSample()}
+          >
+            <Sparkles size={15} /> Load
+          </button>
+        </Row>
+>>>>>>> 6e9173cad89b7b53fed34d11013f586fd91d429b
         <Row title="Reset everything" hint="Deletes tasks, targets, journal and applications">
           <button className="btn btn-danger btn-sm" onClick={() => window.confirm("Delete ALL data? This can't be undone.") && resetAll()}>
             <Trash2 size={15} /> Reset

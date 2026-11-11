@@ -100,7 +100,11 @@ function Shell() {
 
 // Logged-out visitors only ever see the two account pages
 function AuthRoutes() {
+<<<<<<< HEAD
   useTheme("light");
+=======
+  useTheme("auto");
+>>>>>>> 6e9173cad89b7b53fed34d11013f586fd91d429b
   return (
     <Routes>
       <Route path="/login" element={<Login />} />

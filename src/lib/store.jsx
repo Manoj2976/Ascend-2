@@ -1,6 +1,10 @@
 import { createContext, useContext, useEffect, useMemo, useReducer } from "react";
 import { todayKey } from "./dates";
 import { isUuid, uid } from "./constants";
+<<<<<<< HEAD
+=======
+import { makeSample } from "./sample";
+>>>>>>> 6e9173cad89b7b53fed34d11013f586fd91d429b
 import { DEFAULT_DIET, normalizeDiet } from "./diet";
 
 // Data written before accounts existed lives under this key; it is also the "no account" (guest) store.
@@ -246,6 +250,10 @@ export function StoreProvider({ children, storageKey = GUEST_KEY, seedName = "" 
 
       setSettings: (patch) => dispatch({ type: "settings", patch }),
 
+<<<<<<< HEAD
+=======
+      loadSample: () => dispatch({ type: "replace", state: { ...makeSample(), settings: state.settings } }),
+>>>>>>> 6e9173cad89b7b53fed34d11013f586fd91d429b
       exportData: () => JSON.stringify(state, null, 2),
       importData: (json) => {
         const parsed = JSON.parse(json);

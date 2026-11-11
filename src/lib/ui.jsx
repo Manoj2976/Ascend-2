@@ -8,8 +8,12 @@ const NowCtx = createContext(new Date());
 export function NowProvider({ children }) {
   const [now, setNow] = useState(() => new Date());
   useEffect(() => {
+<<<<<<< HEAD
     // every 10s is plenty (the UI shows minutes) and avoids re-rendering every task and the timetable each second
     const id = setInterval(() => document.visibilityState !== "hidden" && setNow(new Date()), 10000);
+=======
+    const id = setInterval(() => setNow(new Date()), 1000);
+>>>>>>> 6e9173cad89b7b53fed34d11013f586fd91d429b
     return () => clearInterval(id);
   }, []);
   return <NowCtx.Provider value={now}>{children}</NowCtx.Provider>;

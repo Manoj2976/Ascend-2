@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 import Select from "./Select";
+=======
+>>>>>>> 6e9173cad89b7b53fed34d11013f586fd91d429b
 import { useEffect, useState } from "react";
 import { Trash2 } from "lucide-react";
 import Sheet, { Field } from "./Sheet";
@@ -81,11 +84,19 @@ export default function FoodModal() {
       >
         <div className="form-row">
           <Field label="Meal">
+<<<<<<< HEAD
             <Select className="input" value={f.meal} onChange={set("meal")}>
               {MEALS.map((m) => (
                 <option key={m}>{m}</option>
               ))}
             </Select>
+=======
+            <select className="input" value={f.meal} onChange={set("meal")}>
+              {MEALS.map((m) => (
+                <option key={m}>{m}</option>
+              ))}
+            </select>
+>>>>>>> 6e9173cad89b7b53fed34d11013f586fd91d429b
           </Field>
           <Field label="Food">
             <input className="input" autoFocus placeholder="e.g. Oats with banana" value={f.name} onChange={set("name")} />

@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 import Select from "../components/Select";
+=======
+>>>>>>> 6e9173cad89b7b53fed34d11013f586fd91d429b
 import { useMemo, useState } from "react";
 import { AnimatePresence } from "framer-motion";
 import { ListChecks, Plus, Search } from "lucide-react";
@@ -82,12 +85,20 @@ export default function Tasks() {
           ))}
         </div>
         <div className="row gap grow end">
+<<<<<<< HEAD
           <Select className="input input-sm" value={cat} onChange={(e) => setCat(e.target.value)} aria-label="Filter by category">
+=======
+          <select className="input input-sm" value={cat} onChange={(e) => setCat(e.target.value)} aria-label="Filter by category">
+>>>>>>> 6e9173cad89b7b53fed34d11013f586fd91d429b
             <option>All</option>
             {CATEGORIES.map((c) => (
               <option key={c.id}>{c.id}</option>
             ))}
+<<<<<<< HEAD
           </Select>
+=======
+          </select>
+>>>>>>> 6e9173cad89b7b53fed34d11013f586fd91d429b
           <div className="search">
             <Search size={15} />
             <input placeholder="Search tasks" value={q} onChange={(e) => setQ(e.target.value)} />

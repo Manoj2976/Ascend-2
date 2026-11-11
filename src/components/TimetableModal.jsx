@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 import Select from "./Select";
+=======
+>>>>>>> 6e9173cad89b7b53fed34d11013f586fd91d429b
 import { useEffect, useMemo, useState } from "react";
 import { AlertTriangle, Trash2 } from "lucide-react";
 import Sheet, { Field } from "./Sheet";
@@ -108,11 +111,19 @@ export default function TimetableModal() {
 
         <div className="form-row">
           <Field label="Type">
+<<<<<<< HEAD
             <Select className="input" value={f.kind} onChange={set("kind")}>
               {KINDS.map((k) => (
                 <option key={k.id}>{k.id}</option>
               ))}
             </Select>
+=======
+            <select className="input" value={f.kind} onChange={set("kind")}>
+              {KINDS.map((k) => (
+                <option key={k.id}>{k.id}</option>
+              ))}
+            </select>
+>>>>>>> 6e9173cad89b7b53fed34d11013f586fd91d429b
           </Field>
           <Field label="Room / place">
             <input className="input" placeholder="e.g. Block B, 204" value={f.place} onChange={set("place")} />

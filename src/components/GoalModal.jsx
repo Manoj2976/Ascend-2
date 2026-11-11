@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 import Select from "./Select";
+=======
+>>>>>>> 6e9173cad89b7b53fed34d11013f586fd91d429b
 import { useEffect, useState } from "react";
 import { Trash2 } from "lucide-react";
 import Sheet, { Field } from "./Sheet";
@@ -109,14 +112,22 @@ export default function GoalModal() {
                 <input className="input" type="month" value={f.month} onChange={set("month")} />
               </Field>
               <Field label="Part of final target">
+<<<<<<< HEAD
                 <Select className="input" value={f.parentId} onChange={set("parentId")}>
+=======
+                <select className="input" value={f.parentId} onChange={set("parentId")}>
+>>>>>>> 6e9173cad89b7b53fed34d11013f586fd91d429b
                   <option value="">None</option>
                   {finals.map((g) => (
                     <option key={g.id} value={g.id}>
                       {g.title}
                     </option>
                   ))}
+<<<<<<< HEAD
                 </Select>
+=======
+                </select>
+>>>>>>> 6e9173cad89b7b53fed34d11013f586fd91d429b
               </Field>
             </div>
             <div className="form-row three">

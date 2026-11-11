@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 import Select from "./Select";
+=======
+>>>>>>> 6e9173cad89b7b53fed34d11013f586fd91d429b
 import { useEffect, useState } from "react";
 import { Trash2 } from "lucide-react";
 import Sheet, { Field } from "./Sheet";
@@ -77,11 +80,19 @@ export default function AppModal() {
         </div>
         <div className="form-row">
           <Field label="Status">
+<<<<<<< HEAD
             <Select className="input" value={f.status} onChange={set("status")}>
               {APP_STATUSES.map((s) => (
                 <option key={s}>{s}</option>
               ))}
             </Select>
+=======
+            <select className="input" value={f.status} onChange={set("status")}>
+              {APP_STATUSES.map((s) => (
+                <option key={s}>{s}</option>
+              ))}
+            </select>
+>>>>>>> 6e9173cad89b7b53fed34d11013f586fd91d429b
           </Field>
           <Field label="Date">
             <input className="input" type="date" value={f.date} onChange={set("date")} />
